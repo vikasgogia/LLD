@@ -9,14 +9,17 @@ public class MoneyTransfer {
     // <userId, user>
     private HashMap<Integer, User> users;
 
-    public MoneyTransfer() {}
+    public MoneyTransfer() {
+        this.users = new HashMap<>();
+    }
 
     public void registerUser(User user) {
         users.put(user.getId(), user);
     }
 
-    public void addExpense(Expense expense) {
-        List<User> expenseGroupMembers = expense.getGroupMembers();
+    public boolean addExpense(Expense expense) {
+        if(!checkIfUsersExist(expense.getGroupMembers())) return false;
+        return calculateExpenses(expense);
     }
 
     public void printBalanceForUsers() {
@@ -34,7 +37,7 @@ public class MoneyTransfer {
     }
 
     private boolean calculateExpenses(Expense expense) {
-        List<Double> amtPerHead =  new ArrayList<>();
+        List<Double> amtPerHead;
 
         switch(expense.getSplit()) {
             case EQUAL -> {

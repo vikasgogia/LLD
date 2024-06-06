@@ -49,6 +49,7 @@ public class User {
         if(user.getId() == id) {
             return;
         }
+        totalExpenses += amount;
         if(expenseSheet.containsKey(user.getId())) {
             expenseSheet.put(user.getId(), expenseSheet.get(user.getId()) + amount);
         }

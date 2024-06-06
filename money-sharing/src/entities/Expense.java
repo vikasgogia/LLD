@@ -53,4 +53,12 @@ public class Expense {
     public Split getSplit() {
         return split;
     }
+
+    public void setExactDistribution(List<Double> exactDistribution) {
+        this.exactDistribution = exactDistribution;
+    }
+
+    public void setPercentDistribution(List<Double> percentDistribution) {
+        this.percentDistribution = percentDistribution;
+    }
 }
