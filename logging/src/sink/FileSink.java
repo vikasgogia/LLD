@@ -1,3 +1,5 @@
+package sink;
+
 public class FileSink implements LogSink {
 
     @Override

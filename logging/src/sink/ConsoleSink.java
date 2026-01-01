@@ -1,3 +1,5 @@
+package sink;
+
 public class ConsoleSink implements LogSink {
 
     @Override

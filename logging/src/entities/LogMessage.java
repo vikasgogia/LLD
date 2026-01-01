@@ -1,3 +1,5 @@
+package entities;
+
 public class LogMessage {
 
     private final LogLevel level;
@@ -28,7 +30,7 @@ public class LogMessage {
 
     @Override
     public String toString() {
-        return "LogMessage{" +
+        return "entities.LogMessage{" +
                 "level=" + level +
                 ", content='" + content + '\'' +
                 ", timestamp=" + timestamp +

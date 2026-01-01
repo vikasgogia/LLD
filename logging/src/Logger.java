@@ -1,3 +1,7 @@
+import entities.LogLevel;
+import entities.LogMessage;
+import processor.LogProcessor;
+
 public class Logger {
 
     private static Logger instance;

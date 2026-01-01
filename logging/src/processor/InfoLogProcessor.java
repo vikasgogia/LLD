@@ -1,3 +1,8 @@
+package processor;
+
+import entities.LogLevel;
+import entities.LogMessage;
+
 public class InfoLogProcessor extends LogProcessor {
 
     public InfoLogProcessor(LogProcessor next) {

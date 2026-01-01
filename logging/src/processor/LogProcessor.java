@@ -1,11 +1,18 @@
-import java.util.ArrayList;
+package processor;
+
+import entities.LogMessage;
+import formatter.LogFormatter;
+import formatter.TextFormatter;
+import sink.LogSink;
+
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public abstract class LogProcessor {
     // Linked list next pointer
     protected LogProcessor next;
 
-    private List<LogSink> observers = new ArrayList<>();
+    private List<LogSink> observers = new CopyOnWriteArrayList<>();
 
     protected LogFormatter formatter = new TextFormatter();
 

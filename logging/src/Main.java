@@ -1,3 +1,10 @@
+import entities.LogLevel;
+import processor.ErrorLogProcessor;
+import processor.InfoLogProcessor;
+import processor.LogProcessor;
+import sink.ConsoleSink;
+import sink.FileSink;
+
 public class Main {
 
     public static void main(String[] args) {

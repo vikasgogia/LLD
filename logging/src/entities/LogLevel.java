@@ -1,3 +1,5 @@
+package entities;
+
 public enum LogLevel {
 
     DEBUG(0),

@@ -1,3 +1,7 @@
+package formatter;
+
+import entities.LogMessage;
+
 public class TextFormatter implements LogFormatter {
 
     @Override

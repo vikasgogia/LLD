@@ -1,5 +1,8 @@
-public class JSONFormatter implements LogFormatter {
+package formatter;
 
+import entities.LogMessage;
+
+public class JSONFormatter implements LogFormatter {
 
     @Override
     public String format(LogMessage msg) {
