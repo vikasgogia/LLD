@@ -3,14 +3,16 @@ package parking;
 import vehicle.Vehicle;
 import vehicle.VehicleSize;
 
+import java.util.UUID;
+
 public class ParkingSpot {
     protected final String spotID;
     protected Vehicle vehicle;
     protected final VehicleSize spotSize;
 
     // Constructor.
-    public ParkingSpot(String spotID, VehicleSize spotSize) {
-        this.spotID = spotID;
+    public ParkingSpot(VehicleSize spotSize) {
+        this.spotID = UUID.randomUUID().toString();
         this.spotSize = spotSize;
         this.vehicle = null;
     }

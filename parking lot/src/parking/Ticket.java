@@ -3,6 +3,7 @@ package parking;
 import vehicle.Vehicle;
 
 import java.util.Date;
+import java.util.UUID;
 
 public class Ticket {
     private final String ticketID;
@@ -12,11 +13,11 @@ public class Ticket {
     private long exitTime;
 
     // Constructor.
-    public Ticket(String ticketID, Vehicle vehicle, ParkingSpot parkingSpot, long entryTime) {
-        this.ticketID = ticketID;
+    public Ticket(Vehicle vehicle, ParkingSpot parkingSpot) {
+        this.ticketID = UUID.randomUUID().toString();
         this.vehicle = vehicle;
         this.parkingSpot = parkingSpot;
-        this.entryTime = entryTime;
+        this.entryTime = new Date().getTime();;
     }
 
     // Getter.
